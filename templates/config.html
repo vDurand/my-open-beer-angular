@@ -1,0 +1,59 @@
+	<form name="frmConfig" data-ng-submit="frmConfig.$valid && update()" novalidate data-ng-init="setFormScope(this)">
+		<fieldset>
+			<legend>Rafraîchissements</legend>
+			<div class="form-group">
+				<label for="name">Breweries</label>
+					<div class="radio">
+						<label>
+							<input type="radio" name="breweriesRefresh" value="all" data-ng-model="config.breweries.refresh">
+							Recharger à chaque affichage
+						</label>
+					</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="breweriesRefresh" id="breweriesRefresh2" value="ask" data-ng-model="config.breweries.refresh">
+						A la demande
+					</label>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Mise à jour</legend>
+			<div class="form-group">
+				<label for="name">Breweries</label>
+					<div class="radio">
+						<label>
+							<input type="radio" name="breweriesUpdate" value="immediate" data-ng-model="config.breweries.update">
+							Immédiate
+						</label>
+					</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="breweriesUpdate" id="breweriesUpdate2" value="deffered" data-ng-model="config.breweries.update">
+						A la demande
+					</label>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Paramétres d'accès au serveur distant</legend>
+			<div class="form-group">
+				<label for="url">URL</label>
+				<input class="form-control" type="url" placeholder="Entrez une url" id="url" name="url" data-ng-model="config.server.restServerUrl">
+			</div>
+			<div class="form-group">
+				<label for="token">Private token</label>
+				<input class="form-control" type="text" placeholder="Entrez la clé" id="token" name="token" data-ng-model="config.server.privateToken" disabled="disabled" >
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="force" data-ng-model="config.server.force">
+						Force connexion
+					</label>
+				</div>
+			</div>
+		</fieldset>
+		<button type="submit" class="btn btn-default">Sauvegarder les modifications</button>
+		&nbsp;<a href="breweries" class="btn btn-default" data-ng-click="cancel()">Annuler</a>
+	</form>
