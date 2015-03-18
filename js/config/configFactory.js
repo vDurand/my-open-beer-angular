@@ -10,6 +10,6 @@ module.exports=function() {
     factory.beers.update="immediate";//deffered|immediate
 	factory.server.privateToken="";
 	factory.server.restServerUrl="http://localhost/rest-open-beer/";
-	factory.server.force=false;
+	factory.server.force=true;
 	return factory;
 };

@@ -40,7 +40,8 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
         }
         $scope.data.posted={
             "name" : beer.name,
-            "description"  : beer.description
+            "description"  : beer.description,
+            "idBrewery" : 1
         };
         $scope.data.beers.push(beer);
         beer.created_at=new Date();

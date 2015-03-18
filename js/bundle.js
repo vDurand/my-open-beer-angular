@@ -214,7 +214,8 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
         }
         $scope.data.posted={
             "name" : beer.name,
-            "description"  : beer.description
+            "description"  : beer.description,
+            "idBrewery" : 1
         };
         $scope.data.beers.push(beer);
         beer.created_at=new Date();
@@ -709,7 +710,7 @@ module.exports=function() {
     factory.beers.update="immediate";//deffered|immediate
 	factory.server.privateToken="";
 	factory.server.restServerUrl="http://localhost/rest-open-beer/";
-	factory.server.force=false;
+	factory.server.force=true;
 	return factory;
 };
 },{}],18:[function(require,module,exports){
