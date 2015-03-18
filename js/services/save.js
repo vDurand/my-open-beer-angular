@@ -23,6 +23,7 @@ module.exports=function(rest,config,$route){
 			callback=function(){
 				self.operations.length=0;
 				config.breweries.loaded=false;
+                config.beers.loaded=false;
 				$route.reload();
 			};
 		}
@@ -36,6 +37,7 @@ module.exports=function(rest,config,$route){
 			self.execute(0);
 		}else{
 			config.breweries.loaded=false;
+            config.beers.loaded=false;
 			$route.reload();
 		}
 	}

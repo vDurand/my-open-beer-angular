@@ -36,11 +36,11 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
     $scope._update=function(beer,force,callback){
         var result=false;
         if(angular.isUndefined(beer)){
-            beer=$scope.activebeer;
+            beer=$scope.activeBeer;
         }
         $scope.data.posted={
             "name" : beer.name,
-            "url"  : beer.url
+            "description"  : beer.description
         };
         $scope.data.beers.push(beer);
         beer.created_at=new Date();

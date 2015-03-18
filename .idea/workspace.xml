@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1053d448-cbd2-478d-aa25-230fd1f27d31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/beers/beerAddController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/beers/beerUpdateController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/beers/beersController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/beers/beerForm.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/beers/beersModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/beers/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/beers/beerAddController.js" afterPath="$PROJECT_DIR$/js/beers/beerAddController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/beers/beerUpdateController.js" afterPath="$PROJECT_DIR$/js/beers/beerUpdateController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/beers/beersController.js" afterPath="$PROJECT_DIR$/js/beers/beersController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bundle.js" afterPath="$PROJECT_DIR$/js/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/config.js" afterPath="$PROJECT_DIR$/js/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/config/configController.js" afterPath="$PROJECT_DIR$/js/config/configController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/config/configFactory.js" afterPath="$PROJECT_DIR$/js/config/configFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/beers/main.html" afterPath="$PROJECT_DIR$/templates/beers/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services/save.js" afterPath="$PROJECT_DIR$/js/services/save.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my-open-beer-angular.iws" />
@@ -36,10 +39,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="beersController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/beers/beersController.js">
+      <file leaf-file-name="beerForm.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/beers/beerForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="14" selection-start="3333" selection-end="3333" vertical-scroll-proportion="0.0" vertical-offset="1373" max-vertical-offset="1965">
+            <state line="8" column="154" selection-start="861" selection-end="865" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beerAddController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/beers/beerAddController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="20" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="321" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -48,16 +60,16 @@
       <file leaf-file-name="beerUpdateController.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/beers/beerUpdateController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="9" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.8868243" vertical-offset="0" max-vertical-offset="660">
+            <state line="18" column="35" selection-start="691" selection-end="691" vertical-scroll-proportion="0.3412162" vertical-offset="68" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/beers/main.html">
+      <file leaf-file-name="breweryForm.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/breweries/breweryForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="30" selection-start="3362" selection-end="3362" vertical-scroll-proportion="-16.25" vertical-offset="375" max-vertical-offset="930">
+            <state line="18" column="0" selection-start="1335" selection-end="1335" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -78,19 +90,22 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/breweries/breweryAddController.js" />
-        <option value="$PROJECT_DIR$/js/bundle.js" />
         <option value="$PROJECT_DIR$/js/config/configFactory.js" />
         <option value="$PROJECT_DIR$/js/config/configController.js" />
-        <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/js/beers/beersAddController.js" />
         <option value="$PROJECT_DIR$/js/beers/beersUpdateController.js" />
-        <option value="$PROJECT_DIR$/js/beers/beersController.js" />
         <option value="$PROJECT_DIR$/js/beers/beersModule.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/templates/beers/beerForm.html" />
+        <option value="$PROJECT_DIR$/js/config.js" />
+        <option value="$PROJECT_DIR$/js/beers/beersController.js" />
+        <option value="$PROJECT_DIR$/js/bundle.js" />
+        <option value="$PROJECT_DIR$/js/services/save.js" />
+        <option value="$PROJECT_DIR$/js/beers/beerUpdateController.js" />
         <option value="$PROJECT_DIR$/templates/beers/main.html" />
         <option value="$PROJECT_DIR$/js/beers/beerAddController.js" />
-        <option value="$PROJECT_DIR$/js/beers/beerUpdateController.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -160,7 +175,93 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="breweries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-open-beer-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="save" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,37 +393,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/app.js</url>
-          <line>8</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/config.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/config/configFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="65" selection-start="317" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/save/saveController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/services/rest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="14" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1605">
@@ -460,11 +534,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/save.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="705" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/addons/templates/modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551" />
@@ -477,30 +546,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/saveMain.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/config.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.7297297" vertical-offset="405" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="464" column="50" selection-start="14787" selection-end="14787" vertical-scroll-proportion="0.0" vertical-offset="9741" max-vertical-offset="10320">
           <folding />
         </state>
       </provider>
@@ -512,9 +560,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="7" selection-start="581" selection-end="581" vertical-scroll-proportion="0.84126985" vertical-offset="168" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="54" selection-start="494" selection-end="494" vertical-scroll-proportion="0.3626943" vertical-offset="150" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="365" column="42" selection-start="12216" selection-end="12224" vertical-scroll-proportion="0.33212996" vertical-offset="5291" max-vertical-offset="14010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/breweries/breweriesController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="3039" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
+        <state line="98" column="30" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.3614865" vertical-offset="1256" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/breweries/breweriesModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="5" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/breweries/breweryAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="34" selection-start="1459" selection-end="1463" vertical-scroll-proportion="0.566787" vertical-offset="346" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.45595855" vertical-offset="6" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/beers/beersModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="505" selection-end="505" vertical-scroll-proportion="0.103626944" vertical-offset="0" max-vertical-offset="579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config/configController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="44" selection-start="344" selection-end="344" vertical-scroll-proportion="0.30405405" vertical-offset="0" max-vertical-offset="592">
           <folding />
         </state>
       </provider>
@@ -528,49 +632,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/save/saveController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+        <state line="22" column="13" selection-start="545" selection-end="547" vertical-scroll-proportion="0.41798943" vertical-offset="93" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/config/configFactory.js">
+    <entry file="file://$PROJECT_DIR$/js/services/save.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="335" selection-end="335" vertical-scroll-proportion="0.2027027" vertical-offset="0" max-vertical-offset="592">
+        <state line="39" column="23" selection-start="925" selection-end="925" vertical-scroll-proportion="0.7719595" vertical-offset="128" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/config/configController.js">
+    <entry file="file://$PROJECT_DIR$/templates/config.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="44" selection-start="344" selection-end="344" vertical-scroll-proportion="0.30405405" vertical-offset="0" max-vertical-offset="592">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/breweries/breweriesModule.js">
+    <entry file="file://$PROJECT_DIR$/templates/saveMain.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="545" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/rest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="123" selection-start="1974" selection-end="1976" vertical-scroll-proportion="0.33212996" vertical-offset="611" max-vertical-offset="1605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="121" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.7094595" vertical-offset="0" max-vertical-offset="615">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.16216215" vertical-offset="90" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
@@ -582,58 +665,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/breweries/breweryAddController.js">
+    <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/beers/beerAddController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="44" selection-start="1874" selection-end="1874" vertical-scroll-proportion="1.2176166" vertical-offset="0" max-vertical-offset="900">
+        <state line="37" column="29" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.8868243" vertical-offset="30" max-vertical-offset="750">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/breweries/breweryUpdateController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+        <state line="27" column="23" selection-start="917" selection-end="919" vertical-scroll-proportion="0.6841216" vertical-offset="0" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/beers/main.html">
+    <entry file="file://$PROJECT_DIR$/js/services/rest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="30" selection-start="3362" selection-end="3362" vertical-scroll-proportion="-16.25" vertical-offset="375" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/beers/beersModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="139" selection-start="460" selection-end="460" vertical-scroll-proportion="0.07772021" vertical-offset="0" max-vertical-offset="579">
+        <state line="53" column="123" selection-start="1974" selection-end="1976" vertical-scroll-proportion="0.0" vertical-offset="716" max-vertical-offset="1605">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/beers/beersController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="14" selection-start="3333" selection-end="3333" vertical-scroll-proportion="0.0" vertical-offset="1373" max-vertical-offset="1965">
+        <state line="114" column="13" selection-start="3128" selection-end="3130" vertical-scroll-proportion="0.8614865" vertical-offset="1200" max-vertical-offset="1965">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/templates/beers/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="7" selection-start="581" selection-end="581" vertical-scroll-proportion="0.84126985" vertical-offset="168" max-vertical-offset="735">
+        <state line="58" column="8" selection-start="3637" selection-end="3637" vertical-scroll-proportion="0.8301887" vertical-offset="430" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/breweries/breweryForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="1335" selection-end="1335" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/beers/beerForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="154" selection-start="861" selection-end="865" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/beers/beerAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="20" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="321" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config/configFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="23" selection-start="335" selection-end="335" vertical-scroll-proportion="0.2027027" vertical-offset="0" max-vertical-offset="592">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/beers/beerUpdateController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="9" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.8868243" vertical-offset="0" max-vertical-offset="660">
+        <state line="18" column="35" selection-start="691" selection-end="691" vertical-scroll-proportion="0.3412162" vertical-offset="68" max-vertical-offset="660">
           <folding />
         </state>
       </provider>

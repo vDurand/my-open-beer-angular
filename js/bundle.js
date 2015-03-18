@@ -172,14 +172,102 @@ run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $
 ).factory("config", require("./config/configFactory"));
 
 },{"./addons/drag":1,"./addons/modal":2,"./addons/modalService":3,"./addons/notDeletedFilter":4,"./addons/sortBy":5,"./beers/beersModule":10,"./breweries/breweriesModule":12,"./config":15,"./config/configFactory":17,"./config/configModule":18,"./mainController":19,"./save/saveController":20,"./services/rest":21,"./services/save":22}],7:[function(require,module,exports){
-/**
- * Created by Valentin Durand on 18/03/15.
- * IUT Caen - DUT Informatique - 2014-2015
- */
+module.exports=function($scope,config,$location,rest,save,$document,modalService) {
 
+    $scope.data={};
+    $scope.data["beers"]=config.beers.all;
+    var self=this;
+    var selfScope=$scope;
+    $scope.setFormScope=function(form){
+        $scope.frmBeer=form;
+    };
+    var onRouteChangeOff=$scope.$on('$locationChangeStart', function routeChange(event, newUrl, oldUrl) {
+        if (!$scope.frmBeer || !$scope.frmBeer.$dirty || $scope.exit) return;
+
+        var alert = modalService.showModal("Sortie","<b>Attention</b>, si vous continuez, vous perdez les modifications en cours.<br>Enregistrer avant sortie ?",function(value){
+                selfScope.exit=true;
+                if(value=="Enregistrer et continuer"){
+                    onRouteChangeOff();
+                    if(selfScope._update()==true){
+                        $location.path(newUrl.substring($location.absUrl().length - $location.url().length));
+                    }
+                }else if(value=="Continuer"){
+                    console.log(value);
+                    onRouteChangeOff();
+                    $location.path(newUrl.substring($location.absUrl().length - $location.url().length));
+                }
+            }
+        );
+        event.preventDefault();
+        return;
+    });
+
+    $scope.update=function(beer,force,callback){
+        if($scope._update(beer,force,callback)==true){
+            $location.path("beers");
+        }
+    };
+    $scope._update=function(beer,force,callback){
+        var result=false;
+        if(angular.isUndefined(beer)){
+            beer=$scope.activeBeer;
+        }
+        $scope.data.posted={
+            "name" : beer.name,
+            "description"  : beer.description
+        };
+        $scope.data.beers.push(beer);
+        beer.created_at=new Date();
+        if(config.beers.update==="immediate" || force){
+            rest.post($scope.data,"beers",beer.name,callback);
+        }else{
+            save.addOperation("New",$scope.update,beer);
+            result=true;
+        }
+        return result;
+    }
+};
 },{}],8:[function(require,module,exports){
-arguments[4][7][0].apply(exports,arguments)
-},{"dup":7}],9:[function(require,module,exports){
+module.exports=function($scope,config,$location,rest,save,$document,modalService, $controller){
+    $controller('BeerAddController', {$scope: $scope});
+
+    if(angular.isUndefined(config.activeBeer)){
+        $location.path("beers/");
+    }
+    $scope.activeBeer=config.activeBeer;
+
+    $scope._update=function(beer,force,callback){
+        var result=false;
+        if(force || $scope.frmBeer.$dirty){
+            if(angular.isUndefined(beer)){
+                beer=$scope.activeBeer;
+            }else{
+                config.activeBeer=angular.copy(beer);
+                config.activeBeer.reference=beer;
+            }
+            $scope.data.posted={
+                "name" : beer.name,
+                "description"  : beer.description
+            };
+
+            config.activeBeer.reference.name=$scope.activeBeer.name;
+            config.activeBeer.reference.description=$scope.activeBeer.description;
+            config.activeBeer.reference.updated_at=new Date();
+
+            if(config.beers.update==="immediate" || force)
+                rest.put(config.activeBeer.id,$scope.data,"beers",config.activeBeer.name,callback);
+            else{
+                config.activeBeer.reference.flag="Updated";
+                save.addOperation("Updated",$scope.update,config.activeBeer.reference);
+                result=true;
+            }
+        }else{
+            result=true;
+        }
+        return result;
+    }
+};
+},{}],9:[function(require,module,exports){
 module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
     $scope.data={load:false};
 
@@ -219,7 +307,7 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
     };
 
     $scope.setActive=function(beer){
-        if(brewery!==$scope.activeBeer)
+        if(beer!==$scope.activeBeer)
             $scope.activeBeer=beer;
         else
             $scope.activeBeer=undefined;
@@ -275,7 +363,7 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
         }
         $scope.data.posted={ "beer" : {
             "name" : beer.name,
-            "url"  : beer.url
+            "description"  : beer.description
         }
         };
         $scope.data.beers.push(beer);
@@ -571,6 +659,15 @@ module.exports=function($routeProvider,$locationProvider,$httpProvider) {
 	}).when('/beers', {
             templateUrl: 'templates/beers/main.html',
             controller: 'BeersController'
+    }).when('/beers/refresh', {
+            templateUrl: 'templates/beers/main.html',
+            controller: 'BeersController'
+    }).when('/beers/new', {
+            templateUrl: 'templates/beers/beerForm.html',
+            controller: 'BeerAddController'
+    }).when('/beers/update', {
+            templateUrl: 'templates/beers/beerForm.html',
+            controller: 'BeerUpdateController'
     }).otherwise({
 		redirectTo: '/'
 	});
@@ -811,6 +908,7 @@ module.exports=function(rest,config,$route){
 			callback=function(){
 				self.operations.length=0;
 				config.breweries.loaded=false;
+                config.beers.loaded=false;
 				$route.reload();
 			};
 		}
@@ -824,6 +922,7 @@ module.exports=function(rest,config,$route){
 			self.execute(0);
 		}else{
 			config.breweries.loaded=false;
+            config.beers.loaded=false;
 			$route.reload();
 		}
 	}

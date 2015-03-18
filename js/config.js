@@ -27,6 +27,15 @@ module.exports=function($routeProvider,$locationProvider,$httpProvider) {
 	}).when('/beers', {
             templateUrl: 'templates/beers/main.html',
             controller: 'BeersController'
+    }).when('/beers/refresh', {
+            templateUrl: 'templates/beers/main.html',
+            controller: 'BeersController'
+    }).when('/beers/new', {
+            templateUrl: 'templates/beers/beerForm.html',
+            controller: 'BeerAddController'
+    }).when('/beers/update', {
+            templateUrl: 'templates/beers/beerForm.html',
+            controller: 'BeerUpdateController'
     }).otherwise({
 		redirectTo: '/'
 	});
