@@ -6,7 +6,17 @@
     </div>
     <div class="form-group" data-ng-class="{'has-error has-feedback': frmBeer.description.$invalid && frmBeer.description.$dirty }">
         <label for="description">Description</label>
-        <input class="form-control" type="text" data-ng-model="activeBeer.description" placeholder="Entrez une description" required id="description" name="description">
+        <textarea class="form-control" type="text" data-ng-model="activeBeer.description" placeholder="Entrez une description" required id="description" name="description"></textarea>
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+    </div>
+    <div class="form-group" data-ng-class="{'has-error has-feedback': frmBeer.abv.$invalid && frmBeer.abv.$dirty}">
+        <label for="abv">Degré d'alcool</label>
+        <input class="form-control" type="text" data-ng-model="activeBeer.abv" placeholder="Entrez un degrés d'alcool" id="abv" name="abv">
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+    </div>
+    <div class="form-group" data-ng-class="{'has-error has-feedback': frmBeer.idBrewery.$invalid && frmBeer.idBrewery.$dirty }">
+        <label for="description">Brasserie</label>
+        <select class="form-control" ng-model="activeBeer.idBrewery" ng-options="brewery.id as brewery.name for brewery in localData.breweries" required id="idBrewery" name="idBrewery"></select>
         <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
     </div>
     <div class="form-group">
