@@ -2,6 +2,8 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
 
     $scope.data={};
     $scope.data["beers"]=config.beers.all;
+    $scope.localData = {};
+    rest.getAll($scope.localData, "breweries");
     var self=this;
     var selfScope=$scope;
     $scope.setFormScope=function(form){
@@ -41,7 +43,8 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
         $scope.data.posted={
             "name" : beer.name,
             "description"  : beer.description,
-            "idBrewery" : 1
+            "abv" : beer.abv,
+            "idBrewery" : beer.idBrewery
         };
         $scope.data.beers.push(beer);
         beer.created_at=new Date();
