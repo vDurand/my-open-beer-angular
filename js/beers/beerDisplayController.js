@@ -9,8 +9,7 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
         $location.path("beers/");
     }
     else{
-        if($scope.beer.photo == null){
-            console.log('lel');
+        if($scope.beer.photo == null || $scope.beer.photo == ""){
             $scope.beer.photo = "img/beers/default.jpg"
         }
     }

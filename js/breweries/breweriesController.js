@@ -27,6 +27,10 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
 	$scope.showUpdate=function(){
 		return angular.isDefined($scope.activeBrewery);
 	};
+
+    $scope.showDetail=function(){
+        return angular.isDefined($scope.activeBrewery);
+    };
 	
 	$scope.refreshOnAsk=function(){
 		return config.breweries.refresh == 'ask';
@@ -86,6 +90,14 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
 		config.activeBrewery.reference=$scope.activeBrewery;
 		$location.path("breweries/update");
 	}
+
+    $scope.display=function(brewery){
+        if(angular.isDefined(brewery))
+            $scope.activeBrewery=brewery;
+        config.activeBrewery=angular.copy($scope.activeBrewery);
+        config.activeBrewery.reference=$scope.activeBrewery;
+        $location.path("breweries/detail");
+    }
 	
 	$scope.update=function(brewery,force,callback){
 		if(angular.isUndefined(brewery)){

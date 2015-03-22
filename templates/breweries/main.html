@@ -13,6 +13,9 @@
 	<div class="btn-group" role="group" aria-label="opération" data-ng-show="defferedUpdate()">
 		<a class="btn btn-default" data-ng-class="{'active': mustHideDeleted}" data-ng-click="hideDeleted()">Masquer les suppressions</a>
 	</div>
+    <div class="btn-group" role="group" aria-label="Afficher">
+        <a class="btn btn-default" data-ng-show="showDetail()" data-ng-click="display()">Afficher</a>
+    </div>
 	<div class="btn-group" role="group" aria-label="Modifier">
 		<a class="btn btn-default" data-ng-show="showUpdate()" data-ng-click="edit()">Modifier</a>
 	</div>

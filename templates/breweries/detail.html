@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+    <div class="panel-heading">{{brewery.name}}</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img ng-src="{{brewery.photo}}" alt="{{brewery.name}}">
+                </a>
+            </div>
+            <div class="col-md-9">
+                <div class="col-md-12">
+                    <strong>Nom :</strong><br>
+                    {{brewery.name}}<br><br>
+                    <strong>URL :</strong><br>
+                    {{brewery.url}}<br><br>
+                </div>
+                <div class="col-md-6">
+                    <strong>Date de création :</strong><br>
+                    {{brewery.created_at}}
+                </div>
+                <div class="col-md-6">
+                    <strong>Date de mise à jour :</strong><br>
+                    {{brewery.updated_at}}
+                </div>
+                <div class="col-md-12"><br>
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-default" ng-click="showBeers()">Voir les bières</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn-group" role="group">
+    <a class="btn btn-default" href="breweries">Retour à la liste des brasseries</a>
+</div>
