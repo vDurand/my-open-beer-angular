@@ -68,3 +68,7 @@ tr.active{
 	font-weight: bold;
 	font-color: #AD914D;
 }
+
+.beerlist{
+    margin-top: 5px;
+}

@@ -24,8 +24,22 @@
                 </div>
                 <div class="col-md-12"><br>
                     <div class="btn-group" role="group">
-                        <a class="btn btn-default" ng-click="showBeers()">Voir les bières</a>
+                        <a class="btn btn-default" ng-click="showBeers()">Voir les bières ({{getBeerCount()}})</a>
                     </div>
+                </div>
+                <div class="col-md-12 beerlist" ng-show="beerOn">
+                    <table class="table">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Description</th>
+                            <th>Degrés d'alcool</th>
+                        </tr>
+                        <tr ng-repeat="beer in beers">
+                            <td>{{beer.name}}</td>
+                            <td>{{beer.description}}</td>
+                            <td>{{beer.abv}}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
