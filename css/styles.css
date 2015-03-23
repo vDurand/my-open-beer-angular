@@ -72,3 +72,15 @@ tr.active{
 .beerlist{
     margin-top: 5px;
 }
+
+.rightlogin{
+    float: right;
+}
+.rightlogin a{
+    color: #fff;
+    margin-left: 20px;
+}
+.bandeau{
+    height: 50px;
+    line-height: 32px;
+}

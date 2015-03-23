@@ -31,10 +31,11 @@
 		</div>
 	</div>
 	<div class="container">
-		<ol class="breadcrumb">
-				<li><a href="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home</a></li>
-				<li ng-repeat="page in paths"><a ng-href="{{page.href}}">&nbsp;{{page.caption}}</a></li>
-			</ol>
+		<ol class="breadcrumb bandeau">
+            <li><a href="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home</a></li>
+            <li ng-repeat="page in paths"><a ng-href="{{page.href}}">&nbsp;{{page.caption}}</a></li>
+            <span class="rightlogin">non connecté <a class="btn btn-warning btn-sm" href="login">Se connecter</a></span>
+        </ol>
 	</div>
 	<div class="container">
 		<ng-view>

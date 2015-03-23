@@ -42,6 +42,9 @@ module.exports=function($routeProvider,$locationProvider,$httpProvider) {
     }).when('/beers/detail', {
             templateUrl: 'templates/beers/detail.html',
             controller: 'BeerDisplayController'
+    }).when('/login', {
+            templateUrl: 'templates/login.html',
+            controller: 'LoginController'
     }).otherwise({
 		redirectTo: '/'
 	});
