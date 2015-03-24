@@ -22,8 +22,8 @@
     <div class="btn-group" role="group" aria-label="Supprimer">
         <a class="btn btn-default" data-ng-show="countSelected()>0" data-ng-click="remove()"><data-ng-pluralize count="countSelected()" when="{1: 'Supprimer la brasserie','other':'Supprimer les brasseries ({})'}"></span></a>
     </div>
-    <div class="btn-group" role="group" aria-label="ParBrasserie">
-        <a class="btn btn-default" data-ng-click="orderByBrasserie()"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Afficher par brasserie</a>
+    <div class="btn-group" role="group" aria-label="ParBiere">
+        <a class="btn btn-default" data-ng-click="fullBeerList()"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Afficher par bière</a>
     </div>
     <div class="btn-group" role="group" aria-label="count">
         <div class="btn"><data-ng-pluralize count="results.length" when="{0: 'no beer',1: 'One beer','other':'{} beers'}"></data-ng-pluralize></div>
@@ -39,27 +39,34 @@
         <p data-ng-repeat="message in messages| NotDeletedFilter as resultMessages" class="text-{{message.type}}" data-ng-show="readMessage(message)" data-ng-bind-html="message.content"></p>
     </div>
 </div>
-<table class="table table-striped table-condensed">
-    <thead>
-    <tr>
-        <th><input type="checkbox" title="Sélectionner" data-ng-click="selectAll()" data-ng-model="allSelected"></th>
-        <th data-sort-by data-field="id" data-ref="sortBy"># </th>
-        <th data-sort-by data-field="name" data-ref="sortBy">Name </th>
-        <th data-sort-by data-field="url" data-ref="sortBy">Description </th>
-        <th data-sort-by data-field="abv" data-ref="sortBy">Abv </th>
-        <th data-sort-by data-field="created_at" data-ref="sortBy">Created at </th>
-        <th>Updated at</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr data-ng-repeat="beer in data.beers | NotDeletedFilter | orderBy:sortBy.field : sortBy.asc | filter:q as results track by $index" data-ng-dblclick="edit(beer)" data-ng-click="setActive(beer)" data-ng-class="{'active': isActive(beer)}">
-        <td><input type="checkbox" title="Sélectionner" data-ng-model="beer.selected" data-ng-click="$event.stopPropagation()"></td>
-        <td>{{beer.id}}</td><td>{{beer.name}}
-        <span class="label" data-ng-class="{'label-success':beer.flag=='New','label-warning':beer.flag=='Updated','label-danger':beer.flag=='Deleted'}" data-ng-show="beer.flag">{{beer.flag}}</span></td>
-        <td>{{beer.description}}</td>
-        <td>{{beer.abv}}</td>
-        <td>{{beer.created_at | date:'dd/MM/yy HH:mm:ss'}}</td>
-        <td>{{beer.updated_at | date:'dd/MM/yy HH:mm:ss'}}</td>
-    </tr>
-    </tbody>
-</table>
+        {{getEachBeer()}}
+<br>
+<div class="panel panel-default" data-ng-repeat="brewery in data.breweries | filter: brewery.beers.length > 0">
+    <div class="panel-heading">{{brewery.name}}</div>
+    <div class="panel-body">
+        <table class="table table-striped table-condensed">
+            <thead>
+            <tr>
+                <th><input type="checkbox" title="Sélectionner" data-ng-click="selectAll()" data-ng-model="allSelected"></th>
+                <th data-sort-by data-field="id" data-ref="sortBy"># </th>
+                <th data-sort-by data-field="name" data-ref="sortBy">Name </th>
+                <th data-sort-by data-field="url" data-ref="sortBy">Description </th>
+                <th data-sort-by data-field="abv" data-ref="sortBy">Abv </th>
+                <th data-sort-by data-field="created_at" data-ref="sortBy">Created at </th>
+                <th>Updated at</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="beer in brewery.beers | NotDeletedFilter | orderBy:sortBy.field : sortBy.asc | filter:q as results track by $index" data-ng-dblclick="edit(beer)" data-ng-click="setActive(beer)" data-ng-class="{'active': isActive(beer)}">
+                <td><input type="checkbox" title="Sélectionner" data-ng-model="beer.selected" data-ng-click="$event.stopPropagation()"></td>
+                <td>{{beer.id}}</td><td>{{beer.name}}
+                <span class="label" data-ng-class="{'label-success':beer.flag=='New','label-warning':beer.flag=='Updated','label-danger':beer.flag=='Deleted'}" data-ng-show="beer.flag">{{beer.flag}}</span></td>
+                <td>{{beer.description}}</td>
+                <td>{{beer.abv}}</td>
+                <td>{{beer.created_at | date:'dd/MM/yy HH:mm:ss'}}</td>
+                <td>{{beer.updated_at | date:'dd/MM/yy HH:mm:ss'}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

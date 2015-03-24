@@ -7,17 +7,29 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
 
     if(config.beers.refresh==="all" || !config.beers.loaded){
         $scope.data.load=true;
-        rest.getAll($scope.data,"beers");
+        rest.getAll($scope.data,"breweries");
         config.beers.loaded=true;
     }else{
-        $scope.data["beers"]=config.beers.all;
+        $scope.data["breweries"]=config.breweries.all;
     }
+    $scope.getEachBeer = function(){
+        if($scope.data.breweries != undefined){
+            console.log($scope.data.breweries.length);
+             for (var i = 0; i < $scope.data.breweries.length; i++){
+             rest.getAll($scope.data, "/beers/brewery/" + $scope.data.breweries[i].id);
+                 if($scope.data["/beers/brewery/" + $scope.data.breweries[i].id] == undefined){
+                     $scope.data.breweries[i].beers = $scope.data["/beers/brewery/" + $scope.data.breweries[i].id];
+                 }
+             }
+        }
+    };
+
     $scope.allSelected=false;
 
     $scope.selectAll=function(){
-        angular.forEach($scope.data.beers, function(value, key) {
+        /*angular.forEach($scope.data.beers, function(value, key) {
             value.selected=$scope.allSelected;
-        });
+        });*/
     };
 
     $scope.refresh=function(){
@@ -64,23 +76,23 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
 
     $scope.countSelected=function(){
         var result=0;
-        angular.forEach($scope.data.beers, function(value, key) {
+        /*angular.forEach($scope.data.beers, function(value, key) {
             if(value.selected && !value.deleted)
                 result++;
-        });
+        });*/
         return result;
     };
 
     $scope.hideDeleted=function(){
         $scope.mustHideDeleted=!$scope.mustHideDeleted;
-        angular.forEach($scope.data.beers, function(value, key) {
+        /*angular.forEach($scope.data.beers, function(value, key) {
             if($scope.mustHideDeleted){
                 if(value.flag==='Deleted')
                     value.deleted=true;
             }else{
                 value.deleted=false;
             }
-        });
+        });*/
     };
 
     $scope.edit=function(beer){
@@ -121,11 +133,11 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
     }
 
     $scope.remove=function(){
-        angular.forEach($scope.data.beers, function(value, key) {
+        /*angular.forEach($scope.data.beers, function(value, key) {
             if(value.selected){
                 $scope.removeOne(value);
             }
-        });
+        });*/
         return true;
     };
     $scope.removeOne=function(beer,force,callback){
@@ -137,8 +149,7 @@ module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
             beer.deleted=$scope.hideDeleted;
         }
     }
-
-    $scope.orderByBrasserie = function(){
-        $location.path("beers/brewery");
+    $scope.fullBeerList = function(){
+        $location.path("beers");
     }
 };
