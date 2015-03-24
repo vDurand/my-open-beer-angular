@@ -9,22 +9,30 @@
             </div>
             <div class="col-md-9">
                 <div class="col-md-12">
-                    <strong>Nom :</strong><br>
-                    {{brewery.name}}<br><br>
-                    <strong>URL :</strong><br>
-                    {{brewery.url}}<br><br>
+                    <strong>Nom :</strong>
+                    <br>
+                    {{brewery.name}}
+                    <br>
+                    <br>
+                    <strong>URL :</strong>
+                    <br>
+                    <a target="_blank" ng-href="{{brewery.url}}">{{brewery.url}}</a>
+                    <br>
+                    <br>
                 </div>
                 <div class="col-md-6">
-                    <strong>Date de création :</strong><br>
+                    <strong>Date de création :</strong>
+                    <br>
                     {{brewery.created_at}}
                 </div>
                 <div class="col-md-6">
-                    <strong>Date de mise à jour :</strong><br>
+                    <strong>Date de mise à jour :</strong>
+                    <br>
                     {{brewery.updated_at}}
                 </div>
                 <div class="col-md-12"><br>
                     <div class="btn-group" role="group">
-                        <a class="btn btn-default" ng-click="showBeers()">Voir les bières ({{getBeerCount()}})</a>
+                        <a ng-class="{'btn disabled btn-default': getBeerCount() == 0 , 'btn btn-default': getBeerCount() > 0}" ng-click="showBeers()">Voir les bières ({{getBeerCount()}})</a>
                     </div>
                 </div>
                 <div class="col-md-12 beerlist" ng-show="beerOn">

@@ -9,26 +9,33 @@
             </div>
             <div class="col-md-9">
                 <div class="col-md-12">
-                    <strong>Nom :</strong><br>
-                    {{beer.name}}<br><br>
-                    <strong>Description :</strong><br>
-                    {{beer.description}}<br><br>
+                    <strong>Nom :</strong>
+                    <br>
+                    {{beer.name}}
+                    <br><br>
+                    <strong>Description :</strong>
+                    <br>
+                    {{beer.description}}
+                    <br><br>
                 </div>
                 <div class="col-md-6">
-                    <strong>Date de création :</strong><br>
+                    <strong>Date de création :</strong>
+                    <br>
                     {{beer.created_at}}
                 </div>
                 <div class="col-md-6">
-                    <strong>Date de mise à jour :</strong><br>
+                    <strong>Date de mise à jour :</strong>
+                    <br>
                     {{beer.updated_at}}
+                    <br><br>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-6">
                     <strong>Brasseur :</strong><br>
                     {{getBrewery()}}
                 </div>
-                <div class="col-md-3"><br>
+                <div class="col-md-6"><br>
                     <div class="btn-group" role="group">
-                        <a class="btn btn-default" ng-click="showBrewery()">Afficher brasseur</a>
+                        <a class="btn btn-default" ng-click="showBrewery(brewery)">Afficher brasseur</a>
                     </div>
                 </div>
             </div>
