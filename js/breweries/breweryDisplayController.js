@@ -35,4 +35,11 @@ module.exports=function($scope,config,$location,rest,save,$document,modalService
             $scope.beerOn = false;
         }
     };
+
+    $scope.showBeer = function(beer){
+        config.activeBeer=angular.copy(beer);
+        config.activeBeer.reference=beer;
+
+        $location.path("beers/detail");
+    }
 };

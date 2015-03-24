@@ -64,23 +64,33 @@ body{
     padding-left :140px;
 }
 
-tr.active{
+tr.active {
 	font-weight: bold;
 	font-color: #AD914D;
 }
 
-.beerlist{
+.beerlist {
     margin-top: 5px;
 }
 
-.rightlogin{
+.rightlogin {
     float: right;
 }
-.rightlogin a{
+
+.rightlogin a {
     color: #fff;
     margin-left: 20px;
 }
-.bandeau{
+
+.bandeau {
     height: 50px;
     line-height: 32px;
+}
+
+.link2beer {
+    cursor: pointer;
+}
+
+.link2beer:hover {
+    background-color: #f8f5f0;
 }
