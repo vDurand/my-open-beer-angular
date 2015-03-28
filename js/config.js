@@ -1,6 +1,6 @@
 module.exports=function($routeProvider,$locationProvider,$httpProvider) {
 	//$httpProvider.defaults.useXDomain = true;
-	//$httpProvider.defaults.withCredentials = true;
+	$httpProvider.defaults.withCredentials = true;
 	delete $httpProvider.defaults.headers.common["X-Requested-With"];
 	$routeProvider.
 	when('/', {
