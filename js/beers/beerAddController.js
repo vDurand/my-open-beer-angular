@@ -1,7 +1,13 @@
 module.exports=function($scope,config,$location,rest,save,$document,modalService) {
 
-    $scope.data={};
-    $scope.data["beers"]=config.beers.all;
+    $scope.data={load:false};
+    if(config.beers.refresh==="all" || !config.beers.loaded){
+        $scope.data.load=true;
+        rest.getAll($scope.data,"beers");
+        config.beers.loaded=true;
+    }else{
+        $scope.data["beers"]=config.beers.all;
+    }
     $scope.localData = {};
     rest.getAll($scope.localData, "breweries");
     var self=this;

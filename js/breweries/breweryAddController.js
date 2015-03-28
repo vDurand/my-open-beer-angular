@@ -1,7 +1,13 @@
 module.exports=function($scope,config,$location,rest,save,$document,modalService) {
-	
-	$scope.data={};
-	$scope.data["breweries"]=config.breweries.all;
+
+    $scope.data={load:false};
+    if(config.breweries.refresh==="all" || !config.breweries.loaded){
+        $scope.data.load=true;
+        rest.getAll($scope.data,"breweries");
+        config.breweries.loaded=true;
+    }else{
+        $scope.data["breweries"]=config.breweries.all;
+    }
 	var self=this;
 	var selfScope=$scope;
 	$scope.setFormScope=function(form){
