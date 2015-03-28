@@ -1,26 +1,36 @@
 module.exports=function($scope,rest,$timeout,$location,config,$route,save) {
     $scope.data={load:false};
-
+    $scope.data.associated = false;
     $scope.sortBy={field:"name",asc:false};
-
     $scope.messages=rest.messages;
 
-    if(config.beers.refresh==="all" || !config.beers.loaded){
+    if(config.breweries.refresh==="all" || !config.breweries.loaded){
         $scope.data.load=true;
         rest.getAll($scope.data,"breweries");
-        config.beers.loaded=true;
+        config.breweries.loaded=true;
     }else{
         $scope.data["breweries"]=config.breweries.all;
     }
+    if(config.beers.refresh==="all" || !config.beers.loaded){
+        $scope.data.load=true;
+        rest.getAll($scope.data,"beers");
+        config.beers.loaded=true;
+    }else{
+        $scope.data["beers"]=config.beers.all;
+    }
     $scope.getEachBeer = function(){
-        if($scope.data.breweries != undefined){
-            console.log($scope.data.breweries.length);
+        if($scope.data.breweries != undefined && $scope.data.beers != undefined && !$scope.data.associated){
              for (var i = 0; i < $scope.data.breweries.length; i++){
-             rest.getAll($scope.data, "/beers/brewery/" + $scope.data.breweries[i].id);
-                 if($scope.data["/beers/brewery/" + $scope.data.breweries[i].id] == undefined){
-                     $scope.data.breweries[i].beers = $scope.data["/beers/brewery/" + $scope.data.breweries[i].id];
+                 $scope.data.breweries[i].hasBeer = false;
+                 $scope.data.breweries[i].beers = [];
+                 for(var j = 0; j< $scope.data.beers.length; j++){
+                     if($scope.data.beers[j].idBrewery == $scope.data.breweries[i].id){
+                         $scope.data.breweries[i].hasBeer = true;
+                         $scope.data.breweries[i].beers.push($scope.data.beers[j]);
+                     }
                  }
              }
+             $scope.data.associated = true;
         }
     };
 

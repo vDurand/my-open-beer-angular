@@ -41,7 +41,7 @@
 </div>
         {{getEachBeer()}}
 <br>
-<div class="panel panel-default" data-ng-repeat="brewery in data.breweries | filter: brewery.beers.length > 0">
+<div class="panel panel-default" data-ng-repeat="brewery in data.breweries" data-ng-show="brewery.hasBeer">
     <div class="panel-heading">{{brewery.name}}</div>
     <div class="panel-body">
         <table class="table table-striped table-condensed">
